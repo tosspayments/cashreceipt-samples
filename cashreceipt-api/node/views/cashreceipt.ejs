@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>발급 성공</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+
+<body>
+    <section>
+
+        <%  if (isSuccess) { %>
+        <h1>발급 성공</h1>
+        <p>결과 데이터 : <%= JSON.stringify(responseJson) %></p>
+        <p>orderName : <%= responseJson.orderName %></p>
+
+        <p>receiptKey : <%= responseJson.receiptKey  %></p>
+        <p>approvalNumber : <%= responseJson.capprovalNumber  %></p>
+        <p>receiptUrl : <%= responseJson.receiptUrl   %></p>
+
+        </p>
+
+        <% } else { %>
+        <h1>발급 실패</h1>
+        <p>에러메시지 : <%= responseJson.message %></p>
+        <span>에러코드: <%= responseJson.code %></span>
+        <% } %>
+
+    </section>
+</body>
+
+</html>
