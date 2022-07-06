@@ -7,7 +7,7 @@ var router = express.Router();
 var secretKey = "test_ak_ZORzdMaqN3wQd5k6ygr5AkYXQGwy";
 
 router.get("/cashreceipt", function (req, res) {
-  let orderId = "cashreceipt-".time() * 1000;
+  let orderId = "cashreceipt-" + uuid();
   let amount = 50000;
   let registrationNumber = "01000001234";
   let type = "소득공제";
