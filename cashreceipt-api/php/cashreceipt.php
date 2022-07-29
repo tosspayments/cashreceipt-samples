@@ -7,7 +7,7 @@ $orderId = "cashreceipt-" . time()*1000;
 $amount = 50000;
 $registrationNumber  = "01000001234";
 $type = "소득공제";
-$taxFreeAmount  = 0
+$taxFreeAmount  = 0;
 $orderName = "토스 티셔츠 외 2건";
 
 
